@@ -9,6 +9,6 @@
         "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "src/app.js"],
     "exclude": ["node_modules"]
   }
