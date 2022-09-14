@@ -6,10 +6,6 @@ const router = express.Router();
 router.get("/me", (req: Request, res: Response) => {
     GetAllData("user").then((data: any) => {
         const meData = data.filter((i: Record<string, any>) => i.email == req.headers.authorization);
-        // const result = {
-        //     OK: meData? true : false,
-        //     DATA: meData? meData : []
-        // };
         if (meData.length > 0) {
             const result = {
                 jwt: meData[0].email,
@@ -34,10 +30,6 @@ router.get("/me", (req: Request, res: Response) => {
 router.post("/login", (req: Request, res: Response) => {
     GetAllData("user").then((data: any) => {
         const meData = data.filter((i: any) => i.email == req.body.email);
-        // const result = {
-        //     OK: meData? true : false,
-        //     DATA: meData? meData : []
-        // };
         if (meData.length > 0) {
             const result = {
                 jwt: meData[0].email,
@@ -69,5 +61,4 @@ router.post("/register", (req: Request, res: Response) => {
         }
     });
 });
-
 export default router;
