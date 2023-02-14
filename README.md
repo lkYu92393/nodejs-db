@@ -1,4 +1,4 @@
-# nodejs_db
+# nodejs-db
 
 A simple expressJS in typescript server, to serve data for react query auth test (link: https://github.com/lkYu92393/react-query-auth-test).
 
